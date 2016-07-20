@@ -1,0 +1,31 @@
+Lista de mudanças EasyAccept:
+
+(20/11/09 - Danilo Queiroz)
+
+- Resultados agora possuem tempo de execução em millisegundos:
+  - O tempo de execução é computado no método Script.execute e adicionado ao resultado, tal como a linha de execução;
+  - Método ScriptResultsManager.addResult agora recebe apenas Result, já com as informações de linha e tempo de execução;
+  - Result possui métodos para setar e recuperar o tempo de execução do comando por ele representado;
+  - Adicionado em ScriptResultsManager método para recuperar o tempo total de execução do script, em milliseconds
+
+
+- Criação das Interfaces ResultOutputter e ResultFormatter:
+  - Foram implementados os seguintes Outputters: ConsoleResultOutputter, FileResultOutputter;
+  - Foram implementados os seguintes Formatters: TextResultFormatter, XMLResultFormatter 
+  - Impressão dos resultados feitas utilizando Outputters e Formatters;
+
+- Alterado em EasyAccept a forma como os dados são impressos:
+  - É criado um ResultOutputter e um ResultFormatter que são responsáveis por tal tarefa;
+
+- Criação do método na EasyAcceptFacade para recuperar os ResultHandler associado a mesma;
+
+- Remoção dos métods que formatavam o resultado em formato String da EasyAcceptFacade e do resultHandler;
+
+- Criado em ResultHandler métodos para recuperar:
+  - O nome de todos os scripts associados ao resulthandler;
+  - O ScriptResultsManager de um dado arquivo;
+  - Uma lista com todos os ScriptResultsManagers, ordenados por nome;
+
+- Alteração na EasyAcceptTask para suportar novos atributos e lidar com a nova forma de impressao de resultados:
+
+- Alguns pequenos refatoramentos, tipicamente alteração de estruturas tipo loops while com iterador para for-each loops;

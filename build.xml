@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<!-- ====================================================================== 
+     02/08/2004 20:16:34                                                        
+
+     EasyAccept    
+     Framework to write and execute acceptance tests
+                   
+     jacques                                                                
+     ====================================================================== -->
+<project name="EasyAccept" default="all">
+	<description>
+            Framework to write and execute acceptance tests
+    </description>
+	<property name="home" value="." />
+	<property name="source" value="${home}/src" />
+	<property name="source-maven" value="${home}/src-maven" />
+	<property name="lib" value="${home}/lib" />
+	<property name="classes" value="${home}/bin" />
+	<property name="easyacceptjar" value="${lib}/easyaccept.jar" />
+	<property name="ant.test.lib" value="${lib}/ant-testutil.jar"/>	
+	<property name="junit" value="${lib}/junit.jar" />
+
+	<!-- ================================= 
+          target: all              
+         ================================= -->
+	<target name="all" depends="jar" description="--> Framework to write and execute acceptance tests">
+	</target>
+
+	<target name="compile">
+		<delete dir="${classes}" failonerror="true" />
+		<mkdir dir="${classes}"/>
+		<javac srcdir="${source}" destdir="${classes}" source="1.5" target="1.5" debug="true" optimize="on" excludes="tests/**">
+			<classpath>
+				<pathelement path="${easyacceptjar}" />
+				<pathelement path="${junit}" />
+				<pathelement path="${ant.test.lib}"/>
+				<pathelement path="${lib}/wsdl4jb.jar"/>
+				<pathelement path="${lib}/axis.jar"/>
+				<pathelement path="${lib}/jaxrpc.jar"/>
+				<pathelement path="${lib}/saaj.jar"/>
+			</classpath>
+		</javac>
+	</target>
+
+	<target name="compile-maven" depends="compile">
+		<javac srcdir="${source-maven}" destdir="${classes}" source="1.5" target="1.5" debug="true" optimize="on" excludes="tests/**">
+		</javac>
+	</target>
+	
+	<target name="jar" depends="compile">
+		<jar destfile="${easyacceptjar}" basedir="${classes}">
+		</jar>
+	</target>
+	
+	<target name="jar-maven" depends="compile-maven">
+		<jar destfile="${easyacceptjar}" basedir="${classes}">
+		</jar>
+	</target>
+	
+	<target name="easyaccept.task.init" description="Taskdef the EasyAccept-Task">
+	   <taskdef name="easyaccept" classname="easyaccept.EasyAcceptTask" classpath="${easyacceptjar}"/>
+	</target>
+	
+	<target name="acceptance-test" depends="jar,easyaccept.task.init">
+		<echo/>
+
+		<easyaccept failonerror="true" failureproperty="easyaccept.ant.task.failed" facade="easyaccept.script.test.TestFacade">
+			<path>
+				<fileset dir="${home}/tests" includes="script*.txt"/>
+			</path>
+
+			<classpath>
+				<pathelement path="${easyacceptjar}" />
+				<pathelement path="${junit}" />
+				<pathelement path="${ant.test.lib}"/>
+				<pathelement path="${lib}/wsdl4jb.jar"/>
+				<pathelement path="${lib}/axis.jar"/>
+				<pathelement path="${lib}/jaxrpc.jar"/>
+				<pathelement path="${lib}/saaj.jar"/>
+			</classpath>
+		</easyaccept>		
+		<fail if="easyaccept.ant.task.failed" message="true"/>
+	</target>
+</project>
+

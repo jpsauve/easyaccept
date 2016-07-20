@@ -1,0 +1,1351 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="usermanual_arquivos/filelist.xml">
+<link rel=Edit-Time-Data href="usermanual_arquivos/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>EasyAccept – A Tool to Create Acceptance Tests in Java</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Magno Jefferson</o:Author>
+  <o:LastAuthor>Magno Jefferson</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>179</o:TotalTime>
+  <o:Created>2008-07-12T14:42:00Z</o:Created>
+  <o:LastSaved>2008-07-12T14:42:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>2939</o:Words>
+  <o:Characters>15875</o:Characters>
+  <o:Company>Hewlett-Packard</o:Company>
+  <o:Lines>132</o:Lines>
+  <o:Paragraphs>37</o:Paragraphs>
+  <o:CharactersWithSpaces>18777</o:CharactersWithSpaces>
+  <o:Version>11.5606</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:HyphenationZone>21</w:HyphenationZone>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-1593833729 1073750107 16 0 415 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:24.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+h2
+	{mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	font-size:18.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+h3
+	{mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:13.5pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+pre
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";}
+span.spelle
+	{mso-style-name:spelle;}
+span.grame
+	{mso-style-name:grame;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:570310434;
+	mso-list-template-ids:1743693650;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l1
+	{mso-list-id:619653251;
+	mso-list-template-ids:-381092016;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2
+	{mso-list-id:901064155;
+	mso-list-template-ids:262589554;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l3
+	{mso-list-id:1768193272;
+	mso-list-template-ids:572318036;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Tabela normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=PT-BR link=blue vlink=purple style='tab-interval:35.4pt'>
+
+<div class=Section1>
+
+<h1><span lang=EN-US style='mso-ansi-language:EN-US'>EasyAccept – A Tool to
+Create Acceptance Tests in Java<o:p></o:p></span></h1>
+
+<h1 align=center style='text-align:center'><span lang=EN-US style='mso-ansi-language:
+EN-US'>User Manual<o:p></o:p></span></h1>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>Version 0.13<o:p></o:p></span></p>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>July 1st, 2008<o:p></o:p></span></p>
+
+<h1><span lang=EN-US style='mso-ansi-language:EN-US'>Requirements<o:p></o:p></span></h1>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>EasyAccept is a tool
+developed to help development teams create acceptance tests. Such tests are
+black box and aim to capture the functional requirements for a software system
+as expressed by a client. A client is typically a non-IT person with a need to
+be solved through a software system. EasyAccept is being developed with the
+following requirements in mind: <o:p></o:p></span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l1 level1 lfo1;tab-stops:list 36.0pt'><span lang=EN-US
+     style='mso-ansi-language:EN-US'>It should be easy for a client to write acceptance
+     tests him or herself. Since knowing what to test needs some training (e.g.
+     to test limit conditions, etc.), this task will usually be performed
+     together with an experienced software person. <o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l1 level1 lfo1;tab-stops:list 36.0pt'><span lang=EN-US
+     style='mso-ansi-language:EN-US'>Even if a software person helps a client
+     to write tests, the client must be able to thoroughly understand the
+     written tests without any help (after learning a bit about test language
+     syntax). <o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l1 level1 lfo1;tab-stops:list 36.0pt'><span lang=EN-US
+     style='mso-ansi-language:EN-US'>EasyAccept should be reasonably easy to
+     retrofit into existing software, as long as business logic has been
+     separated from user interface considerations in the software to be tested.
+     <o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l1 level1 lfo1;tab-stops:list 36.0pt'><span lang=EN-US
+     style='mso-ansi-language:EN-US'>It should be easy to automate the
+     execution of acceptance tests. <o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l1 level1 lfo1;tab-stops:list 36.0pt'><span lang=EN-US
+     style='mso-ansi-language:EN-US'>It should be easy to test error conditions
+     and non-error conditions. <o:p></o:p></span></li>
+</ul>
+
+<h1><span lang=EN-US style='mso-ansi-language:EN-US'>Basic Decisions<o:p></o:p></span></h1>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>In order to satisfy the
+above requirements, the following decisions were taken: <o:p></o:p></span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l0 level1 lfo2;tab-stops:list 36.0pt'><span lang=EN-US
+     style='mso-ansi-language:EN-US'>Tests are written using a simple script
+     language. A script can call business logic and check that it produces the
+     proper output. <o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l0 level1 lfo2;tab-stops:list 36.0pt'><span lang=EN-US
+     style='mso-ansi-language:EN-US'>The script language is <i>not</i>
+     object-oriented. It seems easier not to burden the client with the notion
+     of objects, encapsulation, state, etc. <o:p></o:p></span></li>
+</ul>
+
+<h1><span lang=EN-US style='mso-ansi-language:EN-US'>Internal Commands</span></h1>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='mso-cellspacing:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td valign=top style='background:#0C0C0C;padding:0cm 0cm 0cm 0cm'><pre><b><span
+  style='font-family:Verdana'>&nbsp;COMMAND</span></b></pre></td>
+  <td valign=top style='background:#0C0C0C;padding:0cm 0cm 0cm 0cm'><pre><b><span
+  style='font-family:Verdana'>&nbsp;DESCRIPTION</span></b></pre></td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td valign=top style='background:#D9D9D9;padding:0cm 0cm 0cm 0cm'><pre><span
+  class=spelle><b>stringDelimiter</b></span><b> </b></pre></td>
+  <td valign=top style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+  lang=EN-US style='mso-ansi-language:EN-US'>Built-in command that changes the
+  string delimiter to the given delimiter. </span><span class=spelle>By</span>
+  default, <span class=spelle>the</span> string delimiter is &quot;.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td valign=top style='background:#D9D9D9;padding:0cm 0cm 0cm 0cm'><pre><span
+  class=grame><b>expect</b></span></pre></td>
+  <td valign=top style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+  lang=EN-US style='mso-ansi-language:EN-US'>Built-in command that is used to
+  check that a (business logic) command produced the expected result.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td valign=top style='background:#D9D9D9;padding:0cm 0cm 0cm 0cm'><pre><span
+  class=grame><b>expectDifferent</b></span></pre></td>
+  <td valign=top style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+  lang=EN-US style='mso-ansi-language:EN-US'>Built-in command that is used to
+  check that a (business logic) command produced a result different from a
+  given string.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td valign=top style='background:#D9D9D9;padding:0cm 0cm 0cm 0cm'><pre><span
+  class=grame><b>expectWithin</b></span><b>&nbsp;&nbsp; </b></pre></td>
+  <td valign=top style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+  lang=EN-US style='mso-ansi-language:EN-US'>Built-in command that is used to
+  check that a (business logic) command produced the expected floating-point
+  result within a desired precision.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td valign=top style='background:#D9D9D9;padding:0cm 0cm 0cm 0cm'><pre><span
+  class=grame><b>expectError</b></span></pre></td>
+  <td valign=top style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+  lang=EN-US style='mso-ansi-language:EN-US'>Built-in command that is used to
+  check error conditions of a (business logic) command.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td valign=top style='background:#D9D9D9;padding:0cm 0cm 0cm 0cm'><pre><span
+  class=grame><b>equalFiles</b></span></pre></td>
+  <td valign=top style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+  lang=EN-US style='mso-ansi-language:EN-US'>Built-in command that compares two
+  files.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td valign=top style='background:#D9D9D9;padding:0cm 0cm 0cm 0cm'><pre><span
+  class=grame><b>stackTrace</b></span></pre></td>
+  <td valign=top style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+  lang=EN-US style='mso-ansi-language:EN-US'>Built-in command that is used to
+  obtain a stack trace when debugging. This is useful when unexpected
+  exceptions occur and one wishes a stack trace to see what is happening.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td valign=top style='background:#D9D9D9;padding:0cm 0cm 0cm 0cm'><pre><strong><span
+  style='font-family:"Courier New"'>quit</span></strong></pre></td>
+  <td valign=top style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+  lang=EN-US style='mso-ansi-language:EN-US'>Built-in command to quit <span
+  class=spelle>EasyAccept</span><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9'>
+  <td valign=top style='background:#D9D9D9;padding:0cm 0cm 0cm 0cm'><pre><span
+  class=grame><b>executeScript</b></span></pre></td>
+  <td valign=top style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+  lang=EN-US style='mso-ansi-language:EN-US'>Built-in command that executes a
+  given script. The current script’s execution is paused until the new script
+  executes to completion. Either the current thread or a new thread taken from
+  the thread pool may be used to execute the new script.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10'>
+  <td valign=top style='background:#D9D9D9;padding:0cm 0cm 0cm 0cm'><pre><span
+  class=grame><b>repeat</b></span></pre></td>
+  <td valign=top style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+  lang=EN-US style='mso-ansi-language:EN-US'>Built-in command that is used to
+  repeat a given command’s execution a specific number of times.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11'>
+  <td valign=top style='background:#D9D9D9;padding:0cm 0cm 0cm 0cm'><pre><span
+  class=grame><b>threadPool</b></span></pre></td>
+  <td valign=top style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+  lang=EN-US style='mso-ansi-language:EN-US'>Built-in command that creates a
+  thread pool to execute scripts.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12;mso-yfti-lastrow:yes'>
+  <td valign=top style='background:#D9D9D9;padding:0cm 0cm 0cm 0cm'><pre><span
+  class=grame><b>echo</b></span></pre></td>
+  <td valign=top style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+  lang=EN-US style='mso-ansi-language:EN-US'>Built-in command that returns the
+  concatenation of its parameters<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<h1><span lang=EN-US style='mso-ansi-language:EN-US'>Examples<o:p></o:p></span></h1>
+
+<h2><span lang=EN-US style='mso-ansi-language:EN-US'>Executing business logic<o:p></o:p></span></h2>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>A script is written in a
+text file. A command is written on a single line. A command is simply executed.
+For example:<o:p></o:p></span></p>
+
+<pre><span class=grame><span lang=EN-US style='mso-ansi-language:EN-US'>createUser</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'> key=key1 name=&quot;John Doe&quot; <span
+class=spelle>birthdate</span>=1957/02/04<o:p></o:p></span></pre>
+
+<p><span class=grame><span lang=EN-US style='mso-ansi-language:EN-US'>will</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'> simply call the <span class=spelle>createUser</span>
+business method passing three parameters to it.<o:p></o:p></span></p>
+
+<h2><span lang=EN-US style='mso-ansi-language:EN-US'>Checking business logic
+execution<o:p></o:p></span></h2>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>Special built-in commands
+can be used to check that a (business logic) command worked correctly. For
+example:<o:p></o:p></span></p>
+
+<pre><span class=grame><span lang=EN-US style='mso-ansi-language:EN-US'>createUser</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'> key=key1 name=&quot;John Doe&quot; <span
+class=spelle>birthdate</span>=1957/02/04<o:p></o:p></span></pre><pre><span
+class=grame><span lang=EN-US style='mso-ansi-language:EN-US'>expect</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'> &quot;John Doe&quot; <span
+class=spelle>getUserName</span> key=key1<o:p></o:p></span></pre><pre><span
+class=grame><span lang=EN-US style='mso-ansi-language:EN-US'>expectWithin</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'> .01 2345.67 <span class=spelle>getSalary</span> key=key1<o:p></o:p></span></pre>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>In the above, the first
+line calls a business logic command. EasyAccept will accept that it has
+functioned correctly if it does not produce an error (an Exception, in
+programmer parlance). The next line also calls business logic (<span
+class=spelle>getUserName</span> with parameter key1) but checks that it
+returned the string “John Doe”. The third line checks that the salary is
+correct, <span class=spelle>witha</span> <span class=spelle>procesion</span> of
+one cent.<o:p></o:p></span></p>
+
+<h2><span lang=EN-US style='mso-ansi-language:EN-US'>Using variables<o:p></o:p></span></h2>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>It is sometimes necessary
+to obtain the result returned by a command in order to use it in the test
+script. For example, suppose that the </span><span class=spelle><span
+lang=EN-US style='font-family:"Courier New";mso-ansi-language:EN-US'>createUser</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'> command chooses a record key
+internally (say a database OID) that is unknown to the tester. The following
+script shows how to deal with the situation using variables (assuming that </span><span
+class=spelle><span lang=EN-US style='font-family:"Courier New";mso-ansi-language:
+EN-US'>createUser</span></span><span lang=EN-US style='mso-ansi-language:EN-US'>
+returns the chosen record key):<o:p></o:p></span></p>
+
+<pre><span class=grame><span lang=EN-US style='mso-ansi-language:EN-US'>key=</span></span><span
+class=spelle><span lang=EN-US style='mso-ansi-language:EN-US'>createUser</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'> name=&quot;John Doe&quot; <span
+class=spelle>birthdate</span>=1957/02/04<o:p></o:p></span></pre><pre><span
+class=grame><span lang=EN-US style='mso-ansi-language:EN-US'>expect</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'> &quot;John Doe&quot; <span
+class=spelle>getUserName</span> key=${key}<o:p></o:p></span></pre>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>The syntax </span><span
+lang=EN-US style='font-family:"Courier New";mso-ansi-language:EN-US'>${<span
+class=spelle>varName</span>}</span><span lang=EN-US style='mso-ansi-language:
+EN-US'> is substituted by the variable's value.<o:p></o:p></span></p>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>The scope of a variable is
+the set of scripts being executed, that is, from the time of variable
+definition until the end of the current EasyAccept execution.<o:p></o:p></span></p>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>Here is another example
+that checks whether two users with the same attributes generated different keys
+in the database:<o:p></o:p></span></p>
+
+<pre><span lang=EN-US style='mso-ansi-language:EN-US'>key1=<span class=spelle>createUser</span> name=&quot;John Doe&quot; <span
+class=spelle>birthdate</span>=1957/02/04<o:p></o:p></span></pre><pre><span
+lang=EN-US style='mso-ansi-language:EN-US'>key2=<span class=spelle>createUser</span> name=&quot;John Doe&quot; <span
+class=spelle>birthdate</span>=1957/02/04<o:p></o:p></span></pre><pre><span
+class=grame><span lang=EN-US style='mso-ansi-language:EN-US'>expectDifferent</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'> ${key1} echo ${key2}<o:p></o:p></span></pre>
+
+<h2><span lang=EN-US style='mso-ansi-language:EN-US'>Checking error conditions<o:p></o:p></span></h2>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>A special built-in command
+can be used to check that a (business logic) command produces an error (using
+an exception). For example:<o:p></o:p></span></p>
+
+<pre><span class=grame><span lang=EN-US style='mso-ansi-language:EN-US'>expectError</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'> &quot;Unacceptable date.&quot; <span
+class=spelle>createUser</span> name=&quot;John Doe&quot; <span class=spelle>birthdate</span>=1957/02/30<o:p></o:p></span></pre>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>In the above line, a
+business logic command is called (<span class=spelle>createUser</span>).
+EasyAccept will accept that it has functioned correctly if it produces an error
+(an Exception, in programmer parlance) and if the Exception's error message is
+&quot;Unacceptable date.&quot;<o:p></o:p></span></p>
+
+<h2><span lang=EN-US style='mso-ansi-language:EN-US'>Checking voluminous output<o:p></o:p></span></h2>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>When you want to use the
+expect built-in command but the string to be checked is large, it may be better
+to leave the string in a text file and have the business logic command produce
+output in another file. Then, the built-in command <span class=spelle>equalFiles</span>
+can be used to check the command's output. <o:p></o:p></span></p>
+
+<pre><span lang=EN-US style='mso-ansi-language:EN-US'># <span class=grame>this</span> shows that John Doe exists<o:p></o:p></span></pre><pre><span
+class=grame><span lang=EN-US style='mso-ansi-language:EN-US'>expect</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'> &quot;John Doe&quot; <span
+class=spelle>getUserName</span> key=${key1}<o:p></o:p></span></pre><pre><span
+class=grame><span lang=EN-US style='mso-ansi-language:EN-US'>produceReport</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'> key=${key1} <span class=spelle>outputFile</span>=rep.txt<o:p></o:p></span></pre><pre><span
+class=grame><span lang=EN-US style='mso-ansi-language:EN-US'>equalFiles</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'> file1=expected-report.txt file2=rep.txt<o:p></o:p></span></pre>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>In the above example, the
+command <span class=spelle>produceReport</span> will produce a report
+concerning John Doe and the report will be left in file rep.txt. The next line
+checks that the rep.txt file is equal to the expected-report.txt file. This
+last file (the expected report) should be produced beforehand (by hand, for
+example) and should contain exactly the output desired for the <span
+class=spelle>produceReport</span> command. <o:p></o:p></span></p>
+
+<h2><span lang=EN-US style='mso-ansi-language:EN-US'>Executing scripts<o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+lang=EN-US style='mso-ansi-language:EN-US'>With <span class=spelle>EasyAccept</span>
+you can execute a script from within another. The current script’s execution
+pauses until the new script executes to completion. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+lang=EN-US style='mso-ansi-language:EN-US'>&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+lang=EN-US style='font-size:10.0pt;font-family:"Courier New";mso-ansi-language:
+EN-US'># runs the script script2.txt from within the current script using the
+current thread</span><span lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+class=grame><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>executeScript</span></span><span lang=EN-US
+style='font-size:10.0pt;font-family:"Courier New";mso-ansi-language:EN-US'> <span
+class=spelle>newThread</span>=false <span class=spelle>scriptFile</span>=script2.txt</span><span
+lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+lang=EN-US style='mso-ansi-language:EN-US'>&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+lang=EN-US style='mso-ansi-language:EN-US'>If you want the new script’s
+execution to be run in a new thread, you can flag the argument <span
+class=spelle>newThread</span> with true. <span class=spelle>EasyAccept</span>
+takes a new thread from the thread pool, which must have been previously
+created with the <span class=spelle>threadPool</span> command.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+lang=EN-US style='mso-ansi-language:EN-US'>&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+class=grame><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>threadPool</span></span><span lang=EN-US
+style='font-size:10.0pt;font-family:"Courier New";mso-ansi-language:EN-US'> <span
+class=spelle>poolSize</span>=5</span><span lang=EN-US style='mso-ansi-language:
+EN-US'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+lang=EN-US style='font-size:10.0pt;font-family:"Courier New";mso-ansi-language:
+EN-US'># runs the script script2.txt in a new thread taken from the thread pool</span><span
+lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+class=grame><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>executeScript</span></span><span lang=EN-US
+style='font-size:10.0pt;font-family:"Courier New";mso-ansi-language:EN-US'> <span
+class=spelle>newThread</span>=true <span class=spelle>scriptFile</span>=script2.txt</span><span
+lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<h2><span lang=EN-US style='mso-ansi-language:EN-US'>Debugging<o:p></o:p></span></h2>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>When any command produces
+an unexpected exception and you would like to examine a stack trace of the
+situation that led to the exception, use the <span class=spelle>stacktrace</span>
+command as shown below. <o:p></o:p></span></p>
+
+<pre><span lang=EN-US style='mso-ansi-language:EN-US'># the following command produces an exception<o:p></o:p></span></pre><pre><span
+class=grame><span lang=EN-US style='mso-ansi-language:EN-US'>someCommand</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'> <span class=spelle>param</span>=<span
+class=spelle>someValue</span><o:p></o:p></span></pre>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>In this case, in order to
+see details of the exception that was produced, temporarily use the following
+command during debugging: <o:p></o:p></span></p>
+
+<pre><span lang=EN-US style='mso-ansi-language:EN-US'># the following command produces an exception<o:p></o:p></span></pre><pre><span
+class=grame><span lang=EN-US style='mso-ansi-language:EN-US'>stackTrace</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'> <span class=spelle>someCommand</span> <span
+class=spelle>param</span>=<span class=spelle>someValue</span><o:p></o:p></span></pre>
+
+<h2><span lang=EN-US style='mso-ansi-language:EN-US'>Miscellaneous commands<o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+lang=EN-US style='mso-ansi-language:EN-US'>The repeat command can be used to
+execute a given command a specific number of times. The quit command closes <span
+class=spelle>EasyAccept</span>.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+lang=EN-US style='mso-ansi-language:EN-US'>&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+class=grame><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>resetPlayerScore</span></span><span lang=EN-US
+style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+lang=EN-US style='font-size:10.0pt;font-family:"Courier New";mso-ansi-language:
+EN-US'># adds 6x200 points to the player’s score</span><span lang=EN-US
+style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+class=grame><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>repeat</span></span><span lang=EN-US style='font-size:
+10.0pt;font-family:"Courier New";mso-ansi-language:EN-US'> <span class=spelle>numberOfTimes</span>=6
+<span class=spelle>playerScores</span> points=200</span><span lang=EN-US
+style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+class=grame><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>expect</span></span><span lang=EN-US style='font-size:
+10.0pt;font-family:"Courier New";mso-ansi-language:EN-US'> 1200 <span
+class=spelle>getPlayerScore</span></span><span lang=EN-US style='mso-ansi-language:
+EN-US'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+lang=EN-US style='font-size:10.0pt;font-family:"Courier New";mso-ansi-language:
+EN-US'># quits <span class=spelle>EasyAccept</span></span><span lang=EN-US
+style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+class=grame><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>quit</span></span><span lang=EN-US style='mso-ansi-language:
+EN-US'><o:p></o:p></span></p>
+
+<h1><span lang=EN-US style='mso-ansi-language:EN-US'>The language<o:p></o:p></span></h1>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>A script resides in a file.
+Each line consists of name=value pairs. The following are examples of
+acceptable name=value pairs:<o:p></o:p></span></p>
+
+<pre><span class=grame><span lang=EN-US style='mso-ansi-language:EN-US'>name=</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'>value<o:p></o:p></span></pre><pre><span
+class=grame><span lang=EN-US style='mso-ansi-language:EN-US'>value</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></pre><pre><span
+class=grame><span lang=EN-US style='mso-ansi-language:EN-US'>name</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'>=<o:p></o:p></span></pre><pre><span
+lang=EN-US style='mso-ansi-language:EN-US'>name=&quot;&quot;<o:p></o:p></span></pre><pre><span
+lang=EN-US style='mso-ansi-language:EN-US'>=value<o:p></o:p></span></pre>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>In the second case, there
+is no name; in the third case, the value is null; in the fourth case, the value
+is empty; the fifth case is illegal.<o:p></o:p></span></p>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>In a line, the first
+name-value pair represents a command to be executed (the value). If a name is
+given, then that variable name will receive the value returned by the command.
+The command must match a method available in the business logic. Parameters are
+passed as given in the other name=value pairs. In reality, since Java does not
+provide parameter names through reflection, the order of the parameters in the
+test must match the order in the business logic. The names themselves (to the
+left of the = sign) are not used and serve only as documentation in the tests. <i>Remember
+that the parameter order is important</i>. A method appropriate to the
+parameter types given will be found in the business logic. The following
+parameter types are acceptable and automatic conversion will be provided from a
+string to the parameter value of appropriate type: <o:p></o:p></span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l2 level1 lfo3;tab-stops:list 36.0pt'>String </li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l2 level1 lfo3;tab-stops:list 36.0pt'><span class=grame>boolean</span>
+     </li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l2 level1 lfo3;tab-stops:list 36.0pt'><span class=grame>char</span>
+     </li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l2 level1 lfo3;tab-stops:list 36.0pt'><span class=grame>byte</span>
+     </li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l2 level1 lfo3;tab-stops:list 36.0pt'><span class=grame>short</span>
+     </li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l2 level1 lfo3;tab-stops:list 36.0pt'><span class=grame>int</span>
+     </li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l2 level1 lfo3;tab-stops:list 36.0pt'><span class=grame>long</span>
+     </li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l2 level1 lfo3;tab-stops:list 36.0pt'><span class=grame>float</span>
+     </li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l2 level1 lfo3;tab-stops:list 36.0pt'><span class=grame>double</span>
+     </li>
+</ul>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>A line starting with # is a
+comment. The line continuation character is \. A \ character itself must be
+given as \\.<o:p></o:p></span></p>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>The default string delimiter
+is &quot;. This may be changed (see below).<o:p></o:p></span></p>
+
+<h2><span lang=EN-US style='mso-ansi-language:EN-US'>Built-in commands<o:p></o:p></span></h2>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>EasyAccept has several
+built-in commands used to perform special testing actions. They are described
+below.<o:p></o:p></span></p>
+
+<h3><span class=grame><span lang=EN-US style='mso-ansi-language:EN-US'>echo</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></h3>
+
+<p><span class=grame><span lang=EN-US style='font-family:"Courier New";
+mso-ansi-language:EN-US'>echo</span></span><span lang=EN-US style='font-family:
+"Courier New";mso-ansi-language:EN-US'> any string</span><span lang=EN-US
+style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>This command returns the
+concatenation of its arguments. It is typically used to examine command
+results, variable names, etc.<o:p></o:p></span></p>
+
+<h3><span class=grame><span lang=EN-US style='mso-ansi-language:EN-US'>equalFiles</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></h3>
+
+<pre><span class=grame><span lang=EN-US style='mso-ansi-language:EN-US'>equalfiles</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'> <span class=spelle>OKfile</span> <span
+class=spelle>fileToTest</span><o:p></o:p></span></pre>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>This command is a test of
+file contents. It receives two files, and the test passes if the two files have
+identical contents. By convention, the first file contains the correct
+(expected) output and the second file contains the file to be tested. This
+command is typically used after a business logic command that has produced its
+output in a file. There are two ways of using <span class=spelle><i>equalfiles</i></span>
+command:<o:p></o:p></span></p>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>1) With Relative path
+(relative to directory where EasyAccept is executed)<o:p></o:p></span></p>
+
+<pre><span class=grame><span lang=EN-US style='mso-ansi-language:EN-US'>equalfiles</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'> ./<span class=spelle>src</span>/<span
+class=spelle>easyaccept</span>/script/test/script1.txt ./<span class=spelle>src</span>/<span
+class=spelle>easyaccept</span>/script/test/script1.txt<o:p></o:p></span></pre>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>2) With <span class=spelle>AbsolutePath</span>:<o:p></o:p></span></p>
+
+<pre><span class=grame><span lang=EN-US style='mso-ansi-language:EN-US'>equalfiles</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'> c:/projetos/script1.txt c:/script2.txt<o:p></o:p></span></pre>
+
+<h3><span class=grame><span lang=EN-US style='mso-ansi-language:EN-US'>expect</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></h3>
+
+<pre><span class=grame><span lang=EN-US style='mso-ansi-language:EN-US'>expect</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'> <span class=spelle>expectedString</span> <span
+class=spelle>businessLogicCommand</span> <span class=spelle>paramName</span>=<span
+class=spelle>paramValue</span> ...<o:p></o:p></span></pre>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>This command executes the <span
+class=spelle>businessLogicCommand</span> passing the specified parameters. The <span
+class=spelle>businessLogicCommand</span> must return a string which is compared
+with <span class=spelle>expectedString</span>. The test passes if the strings
+are equal. No errors (exceptions) may occur.<o:p></o:p></span></p>
+
+<h3><span class=grame><span lang=EN-US style='mso-ansi-language:EN-US'>expectDifferent</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></h3>
+
+<pre><span class=grame><span lang=EN-US style='mso-ansi-language:EN-US'>expectDifferent</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'> <span class=spelle>stringNotExpected</span> <span
+class=spelle>businessLogicCommand</span> <span class=spelle>paramName</span>=<span
+class=spelle>paramValue</span> ...<o:p></o:p></span></pre>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>This command executes the <span
+class=spelle>businessLogicCommand</span> passing the specified parameters. The <span
+class=spelle>businessLogicCommand</span> must return a string which is then
+compared with <span class=spelle>expectedString</span>. The test passes if the
+strings are different. No errors (exceptions) may occur.<o:p></o:p></span></p>
+
+<h3><span class=grame><span lang=EN-US style='mso-ansi-language:EN-US'>expectError</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></h3>
+
+<pre><span class=grame><span lang=EN-US style='mso-ansi-language:EN-US'>expectError</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'> <span class=spelle>expectedErrorString</span> <span
+class=spelle>businessLogicCommand</span> <span class=spelle>paramName</span>=<span
+class=spelle>paramValue</span> ...<o:p></o:p></span></pre>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>This command executes the <span
+class=spelle>businessLogicCommand</span> passing the specified parameters. The <span
+class=spelle>businessLogicCommand</span> must return an error (produce an
+exception, in Java) using an error string. This string is compared with <span
+class=spelle>expectedErrorString</span>. The test passes if the strings are
+equal. If no exceptions are thrown, the test does not pass.<o:p></o:p></span></p>
+
+<h3><span class=grame><span lang=EN-US style='mso-ansi-language:EN-US'>expectWithin</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></h3>
+
+<pre><span class=grame><span lang=EN-US style='mso-ansi-language:EN-US'>expectWithin</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'> precision <span class=spelle>expectedValue</span> <span
+class=spelle>businessLogicCommand</span> <span class=spelle>paramName</span>=<span
+class=spelle>paramValue</span> ...<o:p></o:p></span></pre>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>This command executes the <span
+class=spelle>businessLogicCommand</span> passing the specified parameters. The <span
+class=spelle>businessLogicCommand</span> must return a value of type double
+which is compared with <span class=spelle>expectedValue</span>. The test passes
+if the values are equal, within the given precision. No errors (exceptions) may
+occur.<o:p></o:p></span></p>
+
+<h3><span class=grame><span lang=EN-US style='mso-ansi-language:EN-US'>stackTrace</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></h3>
+
+<pre><span class=grame><span lang=EN-US style='mso-ansi-language:EN-US'>stackTrace</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'> &lt;any other command, including built-in commands&gt;<o:p></o:p></span></pre>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>This command executes the
+command indicated and, if an exception is thrown, a full stack trace is
+printed. This is useful for debugging and will not normally be used <span
+class=spelle>permamently</span> in scripts. <o:p></o:p></span></p>
+
+<h3><span class=grame><span lang=EN-US style='mso-ansi-language:EN-US'>stringDelimiter</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'> delimiter<o:p></o:p></span></h3>
+
+<pre><span class=grame><span lang=EN-US style='mso-ansi-language:EN-US'>stringDelimiter</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'> <span class=spelle>delimiter_character</span><o:p></o:p></span></pre>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>This command changes the
+string delimiter to the given character. By default, the string delimiter is
+&quot;.<o:p></o:p></span></p>
+
+<h3><span class=grame><span lang=EN-US style='mso-ansi-language:EN-US'>quit</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></h3>
+
+<pre><span class=grame><span lang=EN-US style='mso-ansi-language:EN-US'>quit</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></pre>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>This command ends
+EasyAccept execution.<o:p></o:p></span></p>
+
+<p><span class=grame><b><span lang=EN-US style='font-size:13.5pt;mso-ansi-language:
+EN-US'>executeScript</span></b></span><span lang=EN-US style='mso-ansi-language:
+EN-US'><o:p></o:p></span></p>
+
+<pre><span class=grame><span lang=EN-US style='mso-ansi-language:EN-US'>executeScript</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'> <span class=spelle>newThread</span> <span
+class=spelle>scriptFile</span><o:p></o:p></span></pre><pre><span lang=EN-US
+style='mso-ansi-language:EN-US'>&nbsp;<o:p></o:p></span></pre>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>This command is used to
+execute a script from within another. The new script can either be executed in
+a new thread (first parameter=”true”) or using the current script’s thread
+(first parameter=”false”). The new script is executed using a subroutine return
+mechanism.<o:p></o:p></span></p>
+
+<p><span class=grame><b><span lang=EN-US style='font-size:13.5pt;mso-ansi-language:
+EN-US'>repeat</span></b></span><span lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<pre><span class=grame><span lang=EN-US style='mso-ansi-language:EN-US'>repeat</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'> <span class=spelle>numberOfTimes</span> <span
+class=spelle>anyCommand</span><o:p></o:p></span></pre>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>This command is used to
+execute a script command a given number of times.&nbsp; <o:p></o:p></span></p>
+
+<p><span class=grame><b><span lang=EN-US style='font-size:13.5pt;mso-ansi-language:
+EN-US'>threadPool</span></b></span><span lang=EN-US style='mso-ansi-language:
+EN-US'><o:p></o:p></span></p>
+
+<pre><span class=grame><span lang=EN-US style='mso-ansi-language:EN-US'>threadPool</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'> <span class=spelle>poolSize</span><o:p></o:p></span></pre>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>This command creates a
+thread pool with a definite pool size that EasyAccept uses to execute scripts
+concurrently<span class=grame>..</span><o:p></o:p></span></p>
+
+<h1><span lang=EN-US style='mso-ansi-language:EN-US'>Instructions for the
+Programmer<o:p></o:p></span></h1>
+
+<h1><span lang=EN-US style='font-size:18.0pt;mso-ansi-language:EN-US'>In order
+to call EasyAccept to test a program<o:p></o:p></span></h1>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>In order to expose the
+business logic of your program, you must write a façade. EasyAccept will
+instantiate the façade once and all public methods contained in the façade will
+be callable from a test script. Remember to separate the business logic from
+the user interface. Your façade should not print anything anywhere. It should
+communicate itself with the outside by accepting parameters, returning results
+or throwing exceptions. Parameters and return values cannot be objects. <o:p></o:p></span></p>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>To execute the acceptance tests
+two approaches are presented below. The first one, using the EasyAccept API,
+gives the user more flexibility when running tests and obtaining its results.
+It is even possible subscribe applications as test failures listener (see the
+EasyAccept API subsection for more details). The second approach is focused on
+users that do not want the test execution full control. See below how to
+execute testes.<o:p></o:p></span></p>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>1) Use the EasyAccept API:<o:p></o:p></span></p>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>The user needs to import
+EasyAccept and use its API (</span>Application<span lang=EN-US
+style='mso-ansi-language:EN-US'> Programming Interface). See below how to use
+the tool to test an application when using a simple client class:<o:p></o:p></span></p>
+
+<p><span lang=EN-US style='font-size:10.0pt;font-family:Verdana;mso-ansi-language:
+EN-US'>================================================================================================================<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+lang=FR style='font-size:10.0pt;font-family:"Courier New";color:blue;
+mso-ansi-language:FR'>import java.util.ArrayList;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+lang=FR style='font-size:10.0pt;font-family:"Courier New";color:blue;
+mso-ansi-language:FR'>import java.util.List;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+lang=FR style='font-size:10.0pt;font-family:"Courier New";color:blue;
+mso-ansi-language:FR'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:blue;
+mso-ansi-language:EN-US'>import easyaccept.EasyAcceptFacade;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:blue;
+mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:blue;
+mso-ansi-language:EN-US'>public class TestClient {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:blue;
+mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:blue;
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>      </span><span
+style='mso-spacerun:yes'>  </span>public static void main(String[] args) throws
+Exception {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:blue;
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>      </span><span
+style='mso-spacerun:yes'>        </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:blue;
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>      </span><span
+style='mso-spacerun:yes'>        </span>List&lt;String&gt; files = new
+ArrayList&lt;String&gt;();<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+lang=EN-US style='font-size:10.0pt;font-family:"Courier New";mso-ansi-language:
+EN-US'><span style='mso-tab-count:2'>            </span><span
+style='mso-spacerun:yes'>  </span><span style='color:red'>//<span class=grame>Put</span>
+the testScript1 file into the &quot;<span class=spelle>test scripts</span>&quot;
+list</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+lang=EN-US style='font-size:10.0pt;font-family:"Courier New";mso-ansi-language:
+EN-US'><span style='mso-tab-count:1'>      </span><span style='color:blue'><span
+style='mso-spacerun:yes'>        </span>files.add(&quot;testScript1.txt&quot;);<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+lang=EN-US style='font-size:10.0pt;font-family:"Courier New";mso-ansi-language:
+EN-US'><span style='mso-spacerun:yes'>  </span><span style='mso-tab-count:2'>          </span><span
+style='mso-spacerun:yes'>  </span><span style='color:red'>//<span class=grame>Put</span>
+the testScript2 file into the &quot;<span class=spelle>test scripts</span>&quot;
+list</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+"Courier New";color:blue;mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>  </span>files.add(&quot;testScript2.txt&quot;);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+"Courier New";color:red;mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'> </span><span style='mso-spacerun:yes'> </span>//Instantiate
+your software façade</span><span lang=EN-US style='font-size:10.0pt;font-family:
+"Courier New";mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+lang=EN-US style='font-size:10.0pt;font-family:"Courier New";mso-ansi-language:
+EN-US'><span style='mso-tab-count:1'>      </span><span
+style='mso-spacerun:yes'>    </span><span style='color:blue'><span
+style='mso-tab-count:1'>  </span><span
+style='mso-spacerun:yes'>  </span>TestFacade yourTestFacade = new TestFacade();<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+lang=EN-US style='font-size:10.0pt;font-family:"Courier New";mso-ansi-language:
+EN-US'><span style='mso-tab-count:2'>            </span><span
+style='mso-spacerun:yes'>  </span><span style='color:red'>//Instantiate <span
+class=spelle>EasyAccept façade</span></span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+lang=EN-US style='font-size:10.0pt;font-family:"Courier New";mso-ansi-language:
+EN-US'><span style='mso-tab-count:1'>      </span><span style='color:blue'><span
+style='mso-spacerun:yes'>        </span>EasyAcceptFacade eaFacade = new
+EasyAcceptFacade(yourTestFacade, files);<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-indent:35.4pt;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+"Courier New";color:red;mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>  </span>//Execute the tests</span><span lang=EN-US
+style='font-size:10.0pt;font-family:"Courier New";mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+lang=EN-US style='font-size:10.0pt;font-family:"Courier New";mso-ansi-language:
+EN-US'><span style='mso-tab-count:1'>      </span><span style='color:blue'><span
+style='mso-spacerun:yes'>        </span>eaFacade.executeTests();<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:70.8pt;mso-layout-grid-align:none;
+text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+color:red;mso-ansi-language:EN-US'><span style='mso-spacerun:yes'>  </span>//Print
+the tests execution results</span><span lang=EN-US style='font-size:10.0pt;
+font-family:"Courier New";mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+lang=EN-US style='font-size:10.0pt;font-family:"Courier New";mso-ansi-language:
+EN-US'><span style='mso-tab-count:1'>      </span><span style='color:blue'><span
+style='mso-spacerun:yes'>        </span>System.out.println(eaFacade.getCompleteResults());<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+lang=EN-US style='font-size:10.0pt;font-family:"Courier New";mso-ansi-language:
+EN-US'><span style='mso-tab-count:1'>      </span><span
+style='mso-spacerun:yes'>  </span><span style='color:blue'>}<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+lang=EN-US style='font-size:10.0pt;font-family:"Courier New";color:blue;
+mso-ansi-language:EN-US'>}<o:p></o:p></span></p>
+
+<p><span lang=EN-US style='font-size:10.0pt;font-family:Verdana;mso-ansi-language:
+EN-US'>===============================================================================================================<o:p></o:p></span></p>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>2) Use the following
+syntax:<o:p></o:p></span></p>
+
+<pre><span lang=EN-US style='mso-ansi-language:EN-US'>&nbsp;&nbsp;&nbsp;&nbsp; <span
+class=grame>java</span> -<span class=spelle>classpath</span> ... <span
+class=spelle>easyaccept.EasyAccept</span> &lt;<span class=spelle>FacadeClass</span>&gt; &lt;<span
+class=spelle>scriptFile</span>&gt; [&lt;<span class=spelle>scriptFile</span>&gt;] ...<o:p></o:p></span></pre>
+
+<p><span class=grame>where</span>: </p>
+
+<ul type=disc>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l3 level1 lfo4;tab-stops:list 36.0pt'><span lang=EN-US
+     style='mso-ansi-language:EN-US'>&lt;<span class=spelle>FacadeClass</span>&gt;
+     - corresponds to the full class name (ex: <span class=spelle>easyaccept.script.TestFacade</span>)
+     of facade of <span class=spelle>he</span> system to be tested. <o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l3 level1 lfo4;tab-stops:list 36.0pt'><span lang=EN-US
+     style='mso-ansi-language:EN-US'>&lt;<span class=grame>scriptFile</span>&gt;
+     - corresponds to the full name of a file or a directory. If the argument
+     is a file, it can have any extension and should be composed by test
+     commands written in EasyAccept script language. However, if it is not <span
+     class=grame>a</span> EasyAccept script, EasyAccept will still try to
+     execute each line of the file – resulting in many errors. If the argument
+     is a directory, EasyAccept will look for all files in this directory and
+     its <span class=grame>subdirectories,</span> include them in a queue and
+     execute all test commands of each file found. <o:p></o:p></span></li>
+</ul>
+
+<p><span class=grame><span lang=EN-US style='mso-ansi-language:EN-US'>An</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'> EasyAccept exit code of 0 implies
+that all tests have passed.<o:p></o:p></span></p>
+
+<p><b><span lang=EN-US style='font-size:18.0pt;mso-font-kerning:18.0pt;
+mso-ansi-language:EN-US'>EasyAccept API<o:p></o:p></span></b></p>
+
+<p><span lang=EN-US style='mso-ansi-language:EN-US'>The tool </span><span
+class=spelle><i><span lang=EN-US style='font-size:10.0pt;font-family:Verdana;
+mso-ansi-language:EN-US'>Application</span></i></span><i><span lang=EN-US
+style='font-size:10.0pt;font-family:Verdana;mso-ansi-language:EN-US'>
+Programming Interface </span></i><span lang=EN-US style='font-size:10.0pt;
+font-family:Verdana;mso-ansi-language:EN-US'>(API) gives the user more
+flexibility when testing an application. See below all the EasyAccept API
+operations with the description of each one.<o:p></o:p></span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='mso-cellspacing:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td valign=top style='background:#0C0C0C;padding:0cm 0cm 0cm 0cm'><pre><b><span
+  lang=EN-US style='font-family:Verdana;mso-ansi-language:EN-US'>&nbsp;</span></b><b><span
+  style='font-family:Verdana'>0PERATION</span></b></pre></td>
+  <td valign=top style='background:#0C0C0C;padding:0cm 0cm 0cm 0cm'><pre><b><span
+  style='font-family:Verdana'>&nbsp;DESCRIPTION</span></b></pre></td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td valign=top style='background:#D9D9D9;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>executeTests<o:p></o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td valign=top style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+  lang=EN-US style='mso-ansi-language:EN-US'>Execute the tests<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td valign=top style='background:#D9D9D9;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>getCompleteResults<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+  lang=EN-US style='mso-ansi-language:EN-US'>Returns all the test scripts
+  complete results. The complete results describe: the number of passed tests,
+  the number of not passed tests and the test failures descriptions (if they
+  occur).<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td valign=top style='background:#D9D9D9;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>getScriptCompleteResults<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+  lang=EN-US style='mso-ansi-language:EN-US'>Returns the complete results for
+  the specified test script. The complete results describe: the number of
+  passed tests, the number of not passed tests and the test failures
+  descriptions (if they occur).<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td valign=top style='background:#D9D9D9;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>getSummarizedResults<o:p></o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td valign=top style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+  lang=EN-US style='mso-ansi-language:EN-US'>Returns all test scripts
+  summarized results. The summarized results describe: the number of passed
+  tests and the number of not passed tests.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td valign=top style='background:#D9D9D9;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>getScriptSummarizedResults<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+  lang=EN-US style='mso-ansi-language:EN-US'>Returns the summarized results for
+  the specified test script. The summarized results describe: the number of
+  passed tests and the number of not passed tests.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td valign=top style='background:#D9D9D9;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>getScriptResults<o:p></o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td valign=top style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+  lang=EN-US style='mso-ansi-language:EN-US'>Returns a list with all the
+  results of a specified test script. Each test result is a “result.Result”
+  object (each executed test script line has a related “result.Result” object).<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td valign=top style='background:#D9D9D9;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>getLineResult<o:p></o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td valign=top style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+  lang=EN-US style='mso-ansi-language:EN-US'>Returns a specified script line
+  result. The test result is a “result.Result” object (each executed test
+  script line has a related “result.Result” object).<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td valign=top style='background:#D9D9D9;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>getTotalNumberOfPassedTests<o:p></o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td valign=top style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+  lang=EN-US style='mso-ansi-language:EN-US'>Returns the number of passed
+  tests.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9'>
+  <td valign=top style='background:#D9D9D9;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>getTotalNumberOfNotPassedTests<o:p></o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td valign=top style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+  lang=EN-US style='mso-ansi-language:EN-US'>Returns the number of not passed
+  tests.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10'>
+  <td valign=top style='background:#D9D9D9;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>getScriptNumberOfPassedTests<o:p></o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td valign=top style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+  lang=EN-US style='mso-ansi-language:EN-US'>Returns the number of passed tests
+  of a specified test script.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11'>
+  <td valign=top style='background:#D9D9D9;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>getScriptNumberOfNotPassedTests<o:p></o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td valign=top style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+  lang=EN-US style='mso-ansi-language:EN-US'>Returns the number of not passed
+  tests of a specified test script.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12'>
+  <td valign=top style='background:#D9D9D9;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>getTotalNumberOfTests<o:p></o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td valign=top style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+  lang=EN-US style='mso-ansi-language:EN-US'>Returns the total number of
+  executed tests.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13'>
+  <td valign=top style='background:#D9D9D9;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>getScriptTotalNumberOfTests<o:p></o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td valign=top style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+  lang=EN-US style='mso-ansi-language:EN-US'>Returns the total number of
+  executed tests of a specified test script.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:14'>
+  <td valign=top style='background:#D9D9D9;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>getScriptFailures<o:p></o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td valign=top style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+  lang=EN-US style='mso-ansi-language:EN-US'>Returns the test failures (if they
+  occur) for the specified test script.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:15;mso-yfti-lastrow:yes'>
+  <td valign=top style='background:#D9D9D9;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>addFailureListener<o:p></o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td valign=top style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+  lang=EN-US style='mso-ansi-language:EN-US'>Adds a failure listener to be
+  notified when failure events occur.<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<h1><span lang=EN-US style='font-size:18.0pt;mso-ansi-language:EN-US'>In order
+to evolve EasyAccept<o:p></o:p></span></h1>
+
+<h1><span lang=EN-US style='font-size:12.0pt;mso-font-kerning:0pt;mso-ansi-language:
+EN-US;font-weight:normal'>The EasyAccept short learning curve encourages the
+tool spread. Its simple design can be easily extended to incorporate new
+features.<o:p></o:p></span></h1>
+
+<h1><span lang=EN-US style='font-size:12.0pt;mso-font-kerning:0pt;mso-ansi-language:
+EN-US;font-weight:normal'>Internally, each one of the acceptance tests results
+are a Result object. The Result objects are hierarchically structured to give
+the users flexibility when accessing test results. Two data structure are used
+to manager and organize the results. They are the ScriptResultsManager – SRM
+and ResultsHendler – RH.<o:p></o:p></span></h1>
+
+<h1><span lang=EN-US style='font-size:12.0pt;mso-font-kerning:0pt;mso-ansi-language:
+EN-US;font-weight:normal'>Figure 1 shows EasyAccept architecture.<o:p></o:p></span></h1>
+
+<p align=center style='text-align:center'><span lang=EN-US style='mso-ansi-language:
+EN-US'><!--[if gte vml 1]><v:shapetype id="_x0000_t75" coordsize="21600,21600"
+ o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f"
+ stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:570pt;
+ height:293.25pt'>
+ <v:imagedata src="usermanual_arquivos/image001.jpg" o:title="PEAArqFINAL"/>
+</v:shape><![endif]--><![if !vml]><img width=760 height=391
+src="usermanual_arquivos/image002.jpg" v:shapes="_x0000_i1025"><![endif]><o:p></o:p></span></p>
+
+<p align=center style='text-align:center'><b><span lang=EN-US style='mso-ansi-language:
+EN-US'>Figure 1: EasyAccept architecture<o:p></o:p></span></b></p>
+
+<h1><span lang=EN-US style='font-size:12.0pt;mso-ansi-language:EN-US;
+font-weight:normal'>The SRM encloses all the Result objects of a test script.
+Each executed test script has a SRM data structure related. The RH encloses all
+the SRM structures. The EasyAccept API requests the RH the tests results and
+make them available to the user.<o:p></o:p></span></h1>
+
+<h1><span lang=EN-US style='font-size:12.0pt;mso-ansi-language:EN-US;
+font-weight:normal'>See <a
+href="https://sourceforge.net/tracker/?group_id=146610&amp;atid=765787">here</a>
+the list of future improvements.<o:p></o:p></span></h1>
+
+<p><b><span lang=EN-US style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></b></p>
+
+</div>
+
+</body>
+
+</html>
